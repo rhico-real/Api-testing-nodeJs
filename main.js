@@ -1,6 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 
+var PORT = process.env.PORT || 5000;
+
 const server = http.createServer((req, res) => {
 
     //set header content type
@@ -19,6 +21,6 @@ const server = http.createServer((req, res) => {
     });
 });
 
-server.listen(3000, 'localhost', () => {
-    console.log('listening for requests on port 3000');
+server.listen(PORT, 'localhost', () => {
+    console.log('listening for requests on port' + PORT.toString());
 });
